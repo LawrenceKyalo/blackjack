@@ -6,29 +6,21 @@ class Deck:
         self.cards = []
         suits = ["spades", "clubs", "hearts", "diamonds"]
         ranks = [
-            {"rank": "A", "value": None}, 
-            {"rank": "2", "value": None}, 
-            {"rank": "3", "value": None}, 
-            {"rank": "4", "value": None}, 
-            {"rank": "5", "value": None}, 
-            {"rank": "6", "value": None}, 
-            {"rank": "7", "value": None}, 
-            {"rank": "8", "value": None}, 
-            {"rank": "9", "value": None}, 
-            {"rank": "10", "value": None}, 
-            {"rank": "J", "value": None}, 
-            {"rank": "K", "value": None}, 
-            {"rank": "Q", "value": None}
+            {"rank": "A", "value": 11}, 
+            {"rank": "2", "value": 2}, 
+            {"rank": "3", "value": 3}, 
+            {"rank": "4", "value": 4}, 
+            {"rank": "5", "value": 5}, 
+            {"rank": "6", "value": 6}, 
+            {"rank": "7", "value": 7}, 
+            {"rank": "8", "value": 8}, 
+            {"rank": "9", "value": 9}, 
+            {"rank": "10", "value": 10}, 
+            {"rank": "J", "value": 10}, 
+            {"rank": "K", "value": 10}, 
+            {"rank": "Q", "value": 10}
             ]
-
-        for rank in ranks:
-            if rank["rank"] == 'A':
-                rank["value"] = 11
-            elif rank["rank"] == 'J' or rank["rank"] == 'Q' or rank["rank"] == 'K':
-                rank["value"] = 10
-            else:
-                rank["value"] = rank["rank"]
-
+        
         for suit in suits:
             for rank in ranks:
                 self.cards.append(Card(suit, rank))
