@@ -3,5 +3,8 @@ from card import Card
 from hand import Hand
 from game import Game
 
-g = Game()
-g.play()
+def simulate():
+    g = Game()
+    g.play()
+
+simulate()
