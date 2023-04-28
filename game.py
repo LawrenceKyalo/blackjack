@@ -75,33 +75,33 @@ class Game:
             if player_hand.get_value() > 21:
                 print("You busted. Dealer wins!")
                 return True
-                time.sleep(5)
+                time.sleep(10)
             elif dealer_hand.get_value() > 21:
                 print("Dealer busted. You win!")
                 return True
-                time.sleep(5)
+                time.sleep(10)
             elif dealer_hand.is_blackjack() and player_hand.is_blackjack():
                 print("Both players have BlackJack! Tie!")
                 return True
-                time.sleep(5)
+                time.sleep(15)
             elif player_hand.is_blackjack():
                 print("You have blackjack. You win!")
                 return True
-                time.sleep(5)
+                time.sleep(10)
             elif dealer_hand.is_blackjack():
                 print("Dealer has blackjack. Dealer wins!")
                 return True
-                time.sleep(5)
+                time.sleep(10)
         else:
             if player_hand.get_value() > dealer_hand.get_value():
                 print("You win!")
-                time.sleep(5)
+                time.sleep(15)
             elif player_hand.get_value() == dealer_hand.get_value():
                 print("Tie!")
-                time.sleep(5)
+                time.sleep(15)
             else:
                 print("Dealer wins!")
-                time.sleep(5)
+                time.sleep(15)
 
             return True
         return False
