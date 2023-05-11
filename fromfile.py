@@ -40,18 +40,3 @@ cards_file = open("cards_file.txt", "r")
 cards_read = cards_file.read()
 cards_list = (cards_read.split("\n"))
 cards_file.close()
-
-def shuffle():
-    random.shuffle(cards_list)
-
-def deal(number: int):
-    cards_dealt = []
-    for x in range(number):
-        card = cards_list.pop()
-        cards_dealt.append(card)
-    return cards_dealt
-
-shuffle()
-card = deal(1)[0]
-
-print(card)
